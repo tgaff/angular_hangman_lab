@@ -1,8 +1,9 @@
 console.log('app.js loaded!');
 
-var app = angular.module("hangmanApp", []);
+var app = angular.module("hangmanApp", [])
+  .controller('hangmanController', hangmanController);
 
 function hangmanController() {
   console.log('hangmanController online');
-  this.controllerWorks = 'ok';
+  this.controllerWorks = true;
 }

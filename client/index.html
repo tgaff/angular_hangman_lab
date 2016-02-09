@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app='hangmanApp'>
 
 <head>
   <title>Hangman Game</title>
@@ -16,7 +16,7 @@
 </head>
 
 <body class="full-background">
-<div class='container' id="container">
+<div class='container' id="container" data-ng-controller='hangmanController as hangman'>
   <div id='poor-soul' class='row'>
     <pre class='col-md-6 col-md-offset-3'>
 _________
