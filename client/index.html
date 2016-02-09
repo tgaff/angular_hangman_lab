@@ -30,7 +30,7 @@ _________
 
     </pre>
     <div class='col-sm-12 col-md-6 col-md-offset-3 text-center'>
-      ??? tries remaining
+      {{hangman.game.triesRemaining}} tries remaining
     </div>
   </div>
   <div class='row'>
@@ -38,7 +38,7 @@ _________
       <span class="label label-default">SOLVING:</span>
     </div>
     <div class='col-sm-12 text-center'>
-      <span class='wide'>_ng_l_r</span>
+      <span class='wide'>{{hangman.game.completedWord}}</span>
     </div>
   </div>
 
@@ -46,15 +46,20 @@ _________
     <div class='col-sm-12 text-center'>
       <span class="label label-default">GUESSES:</span>
     </div>
-    <div class='col-sm-12 text-center' id='guesses'>['e', 'i', 'z', 'w']</div>
+    <div class='col-sm-12 text-center' id='guesses'>{{hangman.game.guesses}}</div>
   </div>
+
+
+
+
+
 
   <div class='row'>
     <div class='col-sm-12 text-center'>
       <span class="label label-default">INPUT:</span>
     </div>
     <div class="col-sm-12 text-center">
-      <input type='text' size='1' id='guess'>
+      <input type='text' size='1' id='guess' data-ng-model='hangman.newGuess' data-ng-change='hangman.checkGuess();'>
     </div>
   </div>
   <div class='row' id='statuses'>
